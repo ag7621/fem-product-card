@@ -2,13 +2,22 @@
 
   /* colors */
 
-  --dark-cyan: hsl(185, 75%, 39%);
-  --dark-blue: hsl(229, 23%, 23%);
-  --dark-gray-blue: hsl(227, 10%, 46%);
+  --dark-cyan-400: hsl(185, 75%, 39%);
+  --dark-blue-800: hsl(229, 23%, 23%);
+  --dark-gray-blue-300: hsl(227, 10%, 46%);
 
-  --dark-gray: hsl(0, 0%, 59%);
+  --dark-gray-200: hsl(0, 0%, 59%);
+
+  --white-100: hsl(0, 0%, 100%);
 
   /* components */
+
+  --clr-body-bg: var(--dark-cyan-400);
+  --clr-card-bg: var(--white-100);
+  --clr-card-accent: var(--dark-gray-200);
+
+  --clr-text-primary: var(--dark-blue-800);
+  --clr-text-secondary: var(--dark-gray-blue-300);
 
   /* font size */
 
@@ -89,23 +98,44 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/*
-  9. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
-
 /* general styles */
 
+body {
+  background-color: var(--clr-body-bg);
+  color: var(--clr-text-primary);
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
 
+  display: grid;
+  place-content: center;
 
-.attribution {
+}
+
+.card {
+  background-color: var(--clr-card-bg);
+  text-align: center;
+}
+
+.card__bg {
+  position: relative;
+}
+
+.card__avatar {
+  position: absolute;
+  bottom: 0;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* .attribution {
   font-size: 11px;
   text-align: center;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
+} */
