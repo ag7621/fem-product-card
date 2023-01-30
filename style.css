@@ -21,7 +21,7 @@
 
   /* font size */
 
-  --fs-400: 1.1rem;
+  --fs-400: 0.75rem;
 
   /* font weight */
 
@@ -112,9 +112,15 @@ body {
 
 }
 
+div>p {
+  color: var(--clr-text-secondary);
+}
+
 .card {
   background-color: var(--clr-card-bg);
+  border-radius: 1rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .card__bg {
@@ -123,12 +129,29 @@ body {
 
 .card__avatar {
   position: absolute;
-  bottom: 0;
+  border: 0.35rem solid var(--white-100);
+  border-radius: 100%;
+  left: 50%;
+  bottom: -77%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.card__body {
+  padding: 4.4rem 0 1.35rem;
+  line-height: 1.7;
+}
+
+.card__body>p {
+  font-size: 0.85rem;
+  letter-spacing: 0px;
 }
 
 .card__info {
   display: flex;
   justify-content: space-evenly;
+  border-top: 1px solid var(--clr-card-accent);
+  padding: 1.4rem;
 }
 
 /* .attribution {
