@@ -6,7 +6,7 @@
   --dark-blue-800: hsl(229, 23%, 23%);
   --dark-gray-blue-300: hsl(227, 10%, 46%);
 
-  --dark-gray-200: hsl(0, 0%, 59%);
+  --dark-gray-200: hsl(0, 0%, 80%);
 
   --white-100: hsl(0, 0%, 100%);
 
@@ -21,6 +21,7 @@
 
   /* font size */
 
+  --fs-300: 0.625rem;
   --fs-400: 0.75rem;
 
   /* font weight */
@@ -110,6 +111,10 @@ body {
   display: grid;
   place-content: center;
 
+  background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: 0 -50vh, 50vw 50vh;
+
 }
 
 div>p {
@@ -138,8 +143,13 @@ div>p {
 }
 
 .card__body {
-  padding: 4.4rem 0 1.35rem;
+  padding: 4.375rem 0 1.313rem;
   line-height: 1.7;
+}
+
+.age {
+  color: var(--clr-text-secondary);
+  font-weight: var(--fw-regular);
 }
 
 .card__body>p {
@@ -151,14 +161,24 @@ div>p {
   display: flex;
   justify-content: space-evenly;
   border-top: 1px solid var(--clr-card-accent);
-  padding: 1.4rem;
+  padding: 1.438rem 0;
 }
 
-/* .attribution {
-  font-size: 11px;
+.card__info p {
+  font-size: var(--fs-300);
+  letter-spacing: 1px;
+}
+
+
+.attribution {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-} */
+}
