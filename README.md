@@ -5,7 +5,6 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -14,32 +13,18 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
-### The challenge
-
-- Build out the project to the designs provided
-
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Desktop preview image for Profile card component challenge](/images/desktop-preview.png "Desktop preview")
+![Mobile preview image for Profile card component challenge](/images/mobile-preview.png "Mobile preview")
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/ag7621/fem-profile-card)
+- Live Site URL: [Live Site](https://ag7621.github.io/fem-profile-card/)
 
 ## My process
 
@@ -49,60 +34,58 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+In this challenge I decided to try and use css selectors to target similarly styled html rather than use classes in efforts to reduce the clutter of having a class on every component. For the size of this project I think it worked out reasonably well, but I imagine in future, larger sized projects that it wouldn't be an ideal solution.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+<article class="card">
+  <div class="card__bg">
+    <img src="images/bg-pattern-card.svg" alt="">
+    <div class="card__avatar">
+      <img src="images/image-victor.jpg" alt="">
+    </div>
+  </div>
+  <div class="card__body">
+    <h1>Victor Crest <span class="age">26</span></h1>
+    <p>London</p>
+  </div>
+  <div class="card__info">
+    <div>
+      <h2>80K</h2>
+      <p>Followers</p>
+    </div>
+    <div>
+      <h2>803K</h2>
+      <p>Likes</p>
+    </div>
+    <div>
+      <h2>1.4K</h2>
+      <p>Photos</p>
+    </div>
+  </div>
+</article>
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Positioning multiple background images was something I had not done previously either and was a nice mini challenge learning how to do it. Although my solution is not pixel perfect at the mobile scale, it is at least responsive. I will continue to investigate better solutions to this.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Although I used I tried to use minimal classes to declutter the html for readability I'm not confident that it worked out better than if I had just used classes on needed components. In a larger scale setting I think it would make it more difficult to manage the code with a selector mass controlling styling, but at the time I felt like spamming utility classes was too much. This is something I would like to continue researchin for ideal solutions.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+In attempts to create pixel perfect styling, I feel like I used a lot of tiny, perhaps unneeded adjustments to the css code. While I am content with how it turned out, it feels like too much micro managing and I imagine there is a better solution out there for me to learn. 
+
+I ran into an issue at the start where I had set a css variable for font-size using REM on the body, and found everything to be too oversized. It took me some time to realize that the true font size was much higher than I had thought I set it at. Eventually I resolved it with lowering the variable REM until it had matched the style guide, but don't feel this was ideal either. This is also something I need to look into further.
+
+Overall, despite being a relatively simple design I feel like I overthought way too much of it, and should have allowed the responsiveness to do the work vs managing every tiny bit of the project. I did enjoy the learning experience much though, and will take these findings into future project setup considerations.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [BEM cheat sheet](https://9elements.com/bem-cheat-sheet/) - This helped me understand the basics of how BEM looks and how to name classes.
+- [Kevin Powell Youtube](https://www.youtube.com/@KevinPowell) - Amazing channel by veteran web developer Kevin Powell which helped me to understand CSS much better.
+- [Josh W Comeau CSS reset](https://www.joshwcomeau.com/css/custom-css-reset/) - A CSS reset referred to in a video by Kevin Powell.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@ag7621](https://www.frontendmentor.io/profile/ag7621)

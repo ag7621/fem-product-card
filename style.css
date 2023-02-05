@@ -172,6 +172,7 @@ div>p {
 
 .attribution {
   position: fixed;
+  color: hsl(0, 0%, 0%);
   width: 100%;
   bottom: 0;
   left: 0;
@@ -180,5 +181,5 @@ div>p {
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(228, 100%, 25%);
 }
